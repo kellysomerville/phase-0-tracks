@@ -7,3 +7,4 @@
 * What is a branch and why would you use one? a branch is a spin off branch of the master.....called a feature branch...where you make you updates. which will then be added to your master in github
 * What is a commit? it is when you have committed the updates with a tracked tiime stamp. What makes a good commit message? iy clearly explains what you have done and why.
 * What is a merge conflict? when multiple files have conflicting info.  you must resolve prior to merge.
+8 THIS WAS KELLY MAKING CHANGES TO DEFINITIONS.MD
