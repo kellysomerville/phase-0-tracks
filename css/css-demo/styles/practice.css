@@ -2,8 +2,11 @@
 
 .job {
 	background: #e9e5dc;
-	padding: .5px;
+	padding: 10px;
 	margin: 20px;
+	border: solid;
+    border-width: 2px 4px;
+    border-radius: 40px;
 }
 
  ul {
