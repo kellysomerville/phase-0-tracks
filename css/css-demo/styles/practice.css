@@ -1,0 +1,26 @@
+
+
+.job {
+	background: #e9e5dc;
+	padding: 10px;
+	margin: 20px;
+	border: solid;
+    border-width: 2px 4px;
+    border-radius: 40px;
+}
+
+ ul {
+	font-size: .8em ;
+}
+
+#contact-info {
+  font-size: .8em;
+}
+
+h1:hover {
+    background-color: blue;
+}
+li:first-child {
+    color: blue;
+}
+

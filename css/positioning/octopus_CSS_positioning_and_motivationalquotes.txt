@@ -1,0 +1,60 @@
+
+
+
+img {
+  position: absolute;
+  top: 200px;
+  left: 400px;
+}
+.imgA {
+  z-index: -1;
+  top: 200px;
+  left: 500px;
+   background: blue;
+	padding: 30px;
+	border: solid;
+    border-width: 10px 10px;
+    border-radius: 40px;
+}
+.imgB {
+  z-index: 2;
+  top: 170px;
+  left: 520px;
+}
+.imgC {
+  z-index: 3;
+  top: 338px;
+  left: 583px;
+}_____________________________________________
+body {
+    background-color: white;
+}
+h1 {
+    color: #ffcc00;
+    font-family: Helvetica;
+}
+blockquote {
+  
+    display: inline-table ;
+    background-color: white;
+    font-family: Helvetica;
+    width: 160px;
+    height: 250px;
+    border-bottom: 2px solid black;
+    background-color: white;
+    border-left: 2px solid lightgrey;
+    background-color: white;
+    border-top: 10px solid darkgrey;
+    border-right: 2px solid black ;
+    padding: 20px;
+    margin: 1px;
+    text-align: left ;
+ }
+cite {
+    font-family: Helvetica;
+    text-align: left ;
+    font-weight: bold;
+    line-height: 250%;
+    word-spacing: 3px;
+    display: block; 
+ }
