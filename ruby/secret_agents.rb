@@ -1,5 +1,6 @@
 # An Encrypt Method 
 # we defined our encryption method
+secret_agent_feature
 # we set up a while condition
 # set up conditional logic for our string and "a" to "z" "edge case"
 # we set up our "string" argument so that our user input should move to the next letter
@@ -21,17 +22,20 @@ index = 0
 end
 string
 end
+
 method_encryption("abc")
 method_encryption("zed")
 
 
 # Decryption Method
 # we defined our decryption method
+secret_agent_feature
 # we set up conditions for previous letter
 # we print the string
 # we defined the method to the argument "letter"
 # we called the driver codes to test our methods
 # Ask Secret Agent for Password on bottom
+
 
 def method_decryption (string)
 index = 0
@@ -50,6 +54,7 @@ alphabet = ("a".."z").to_a
 
 end 
 
+# we called the driver codes to test our methods
 method_decryption ("bcd")
 method_decryption ("afe")
 method_encryption('abc')
