@@ -1,40 +1,51 @@
 # An Encrypt Method 
 # we defined our encryption method
-def method_encryption (string)
-index = 0  
+secret_agent_feature
 # we set up a while condition
-  while index < string.length
-# set up conditional logic for our string and "a" to "z"   
-  	if string[index] == "z"
-    string[index] = "a"
-  	else
- # we set up our "string" argument so that our user input should move to the next letter
-    string[index] = string[index].next!
-  	end
-  index += 1
-  end
+# set up conditional logic for our string and "a" to "z" "edge case"
+# we set up our "string" argument so that our user input should move to the next letter
 # we print the string
-puts string
-end
 # we called the driver codes to test our methods
+# after an office hour with Andrew...he broke down the code and we finally got our methods working!
+# more importanly we understand what is happening in our code!!!!
+
+def method_encryption (string) 
+index = 0
+
+  while index < string.length
+    if string[index] == "z"
+    string[index] = "a"
+    else
+    string[index] = string[index].next!
+  end
+  index += 1
+end
+string
+end
+
 method_encryption("abc")
 method_encryption("zed")
 
 
 # Decryption Method
 # we defined our decryption method
+secret_agent_feature
+# we set up conditions for previous letter
+# we print the string
+# we defined the method to the argument "letter"
+# we called the driver codes to test our methods
+# Ask Secret Agent for Password on bottom
+
+
 def method_decryption (string)
 index = 0
-# we set up conditions for previous letter
   while index < string.length
     string[index] = method_previous(string[index])
     index += 1
   end
-# we print the string
-puts string
+string
 end
 
-# we defined the method to the argument "letter"
 def method_previous (letter)
 alphabet = ("a".."z").to_a
 
@@ -42,10 +53,11 @@ alphabet = ("a".."z").to_a
     alphabet[index-1]
 
 end 
+
 # we called the driver codes to test our methods
 method_decryption ("bcd")
 method_decryption ("afe")
-
+method_encryption('abc')
 method_decryption(method_encryption("swordfish"))
 
 # Ask Secret Agent for Password
