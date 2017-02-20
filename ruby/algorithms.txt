@@ -1,0 +1,30 @@
+
+Algorithms robot-in-elevator
+
+For all numbers on the elevator wall equals a floor:
+	-Until you have pushed each number in elevator
+		- you have not visited any floors except floor 1 
+	-if push the number needed
+		- you will arrive on the coorisponding floor
+		- you must step out and visit the floor
+		- finish task at hand on each floor visited
+
+
+
+Algorithm For common task in life
+
+For each morning you wake up you must confirm good hygiene is maintained
+	-walk to you bathroom after waking up
+		-enter the bathroom, turn on shower
+		-remove night clothing
+	- enter you shower
+		- wash hair and body with shampoo and bady wash
+		- rinse hair and body
+		- apply toothpaste to toothbrush and brush teeth
+	- exit shower 
+		- grab towel and dry body and hair
+		- apply deodorant under your arms   
+		- apply lotion to your skin
+	- get dresses
+		- have a wonderful CLEAN day !!
+
