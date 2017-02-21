@@ -22,4 +22,5 @@ puts "#{adoptable} adoptable"
 
 puts "How old is the hamster ?"
 hamster_age = gets.chomp
+ method_detective_feature
 puts "The hamster age is #{hamster_age.to_i}."
