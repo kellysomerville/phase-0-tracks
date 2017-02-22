@@ -21,6 +21,11 @@
 
  "the usual".insert(-1, 'suspects')
  => "the usual suspects"
+ 
+
+ a = "the unusual"
+ a << " suspects"
+ => "the unusual suspects"
 
 
 
