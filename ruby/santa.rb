@@ -1,36 +1,22 @@
   
+  
+  
 class Santa
   #attr_reader :gender, :ethnicity,
-  attr_accessor :gender, :ethnicity, :age, :name
+  attr_accessor :gender, :ethnicity, :age, :name, :reindeer_ranking
   
 	def initialize(gender, ethnicity, age = 0)
 		puts  "Initializing Santa instance ..."
-		@gender = gender
-		@ethnicity = ethnicity
-    @age = age
-    @name = name
-	end
-	
-	# getter
-	def age 
-	  puts @age
-	end
-	
-	# getter
-	def ethnicity
-	  @ethnicity
-	end
-	
-	#getter
-	def gender
-	  @gender
-	end
-	
-	# setter
-	def gender=(new_gender)
-	  @gender = new_gender
-	  @gender
-	end
+		  	@gender = gender
+		  	@ethnicity = ethnicity
+	    	@age = age
+	   	 	@name = name
+	   	 	@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+	   	 	@gender_array = ["agender","female","bigender","male","female","gender fluid", "N/A"]
+	      	@ethnicity_array = ["black","Latino","bigender", "white","Japanese","prefer not to say","Mystical Creature (unicorn)","N/A"]   
+	   	 	@santa_age = ["0",'' ..140"]
+ 
+	end 
 
 	def speak
 		puts "Ho, ho, ho! Haaaappy holidays!"
@@ -40,29 +26,32 @@ class Santa
 		puts "That was a good #{cookie}!" 
 	end
 	
-	def celebrate_birthday(integer)
+	
+	#Set your new Santa's age to a random number between 0 and 140
+	def random_santa_age(santa_age)
+	  @santa_age.shuffle.first{|age| } 
+	end
+	
+	
+	def celebrate_birthday(age)
 	   @age = age + 1
 	end
 	
-	def random_santa(santas)
-	  if santas != false
-	    santas.random do |santa| 
-	      #puts @gender @ethnicity
-	   end
-	 end
-	 end
+	def random_santa_ethnicity(ethnicity)
+	    @ethnicity_array.sample {|ethnicity| }
+	end
 	
-# most preferred to least preferred  
-  reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
-  
+	def random_santa_gender(gender)
+	    @gender_array.sample {|gender| }
+	end
+	
+	# most preferred to least preferred  
+  #move reindeer to the end of the list
   def get_mad_at(name)
-    i = 0
-    if @name == false
-      #move reindeer to the end of the list
-      reindeer_ranking.rotate[-1] #do |reindeer| reindeer[-1]
-    end
-    # we make santa gender/identity list to build santa_array
+   @reindeer_ranking.delete(name)
+   @reindeer_ranking.push(name)
   end
+  
 end
 santas = []
 santas << Santa.new("agender", "black")
@@ -72,16 +61,19 @@ santas << Santa.new("male", "Japanese")
 santas << Santa.new("female", "prefer not to say")
 santas << Santa.new("gender fluid", "Mystical Creature (unicorn)")
 santas << Santa.new("N/A", "N/A")
-  
- 
 
-santa = Santa.new("male", "white", "14", ) 
+reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+  
+#driver code 
+
+santa = Santa.new("male", "white", "1000", ) 
 santa.speak
 santa.eat_milk_and_cookies("choco_chip")
-santa.age
-santa.ethnicity
-santa.gender
-santa.get_mad_at('')
-santa.gender
-
-#santa.age.rand(1-140)
+p santa.age
+p santa.ethnicity
+p santa.get_mad_at("Vixen")
+p santa.gender
+p santa.random_santa_gender('')
+p santa.random_santa_ethnicity('')
+p santa.celebrate_birthday(100)
+p santa.random_santa_age(' ')
