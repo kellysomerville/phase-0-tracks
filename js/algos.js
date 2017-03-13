@@ -58,7 +58,41 @@ function what_is_the_LongestWord(array) {
    else
    return false;
  }
+// ////////////////////////////////////////////////////////////////
+// RELEASE 2
+var arrayOne = [];
 
+var i = 0;
+
+var randomString = function(length) {
+    
+    var text = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    for(var i = 0; i < length; i++) {
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+    }
+    
+    return arrayOne.push(text);
+     
+};
+//  below I am trying to push arrayOne in to newArray and = string length
+var newArray = [ ];
+
+function pushInToNew_array(arrayOne){
+  
+  arrayOne = randomString.length;
+  // newArray.push("") == text.length;
+ 
+    for (var i = 0; i < length; i++){
+      newArray = newArray.push(arrayOne);
+  }
+    return newArray;  
+  
+  }
+// RELEASE 2 DRIVERS CODE
+ console.log(randomString(10));
+ console.log(arrayOne );
+ console.log(pushInToNew_array(arrayOne));
 
 
 // RELEASE 1 DRIVERS CODE
