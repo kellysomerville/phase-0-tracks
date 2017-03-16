@@ -15,18 +15,18 @@ interior_designer = {
  
  puts "What is your name?:"
  name = gets.chomp
- interior_designer[:name] << name
+ interior_designer[:name] = name
 # p interior_designer[:name]
  puts "How old are you?:"
  age = gets.chomp.to_s
- interior_designer[:age] << age
+ interior_designer[:age] = age
 # p interior_designer
 puts "How many children do you have?:"
 number_of_children = gets.chomp.to_s
-interior_designer[:number_of_children] << number_of_children
+interior_designer[:number_of_children] = number_of_children
 puts "What is your favorite decor?:"
 decor_theme = gets.chomp
-interior_designer[:decor_theme] << decor_theme
+interior_designer[:decor_theme] = decor_theme
 # p interior_designer
 # Give the user the opportunity to update a key
 puts "Would you like to update any of your answers?...Here they are #{interior_designer.values}"
@@ -41,8 +41,8 @@ answer = gets.chomp
         update = gets.chomp.to_sym
         puts " what would you like to change #{update} to ?"
         new_value = gets.chomp
-        interior_designer[update] << new_value
         interior_designer[update] = new_value
+       
         puts "Thank you #{name}... We look forward to working with you  :-)  !!!"
   end
 # Print the latest version of the hash, and exit the program.
