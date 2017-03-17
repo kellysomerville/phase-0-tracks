@@ -1,92 +1,79 @@
 
-# Release 0: Simple Search
-# Write a method that takes an array of integers and an integer to search for;
-# method should return index of integer being searched for or nil if integer isn't present in array
+#Release 0: Implement a Simple Search
 
-def search_array(array, integer)
-    # Search array for given integer
-    array.each_with_index do |item, index|
-
-        if item.eql? integer
-            p index
-        elsif !item.eql? integer
-            nil
-        else puts "nil"
-        end
-    
+# Write a method that takes an array of integers (integer) = integer to search for. 
+#The method should return index of the item
+# def takes_an_integer
+def integers (arr, int)
+  current_index = 0
+  index_item = nil
+  arr.each do |item| 
+    if item == int
+      index_item = current_index
     end
-end 
-
-array = [10, 20, 30, 40, 50]
-search_array(array, 4)
-
-# # Release 1: Fibonacci Method
-
-def fibonacci (n)
-    def calculation(n)
-       a = 0
-       b = 1
-
-       # Compute Fibonacci number in the desired position.
-      n.times do
-           temp = a
-           a = b
-           # Add up previous two numbers in sequence.
-           b = temp + b
-       end
-
-        return a
-
-    end 
-
-    fib_results = []
-
-    n.times do |n|
-
-    result = calculation(n)
-    fib_results << result
-    end 
-
-    return fib_results
-
-end
-
-p fibonacci(100)
-
-# p fibonacci(6)
-# Write first 15 Fibonacci numbers in sequence.
-#bubble sort algorithm
-#sorts a collection by moving left to right, compares each value w/next value calculating which value is higher
-
-#bubble sorting
-#method that takes an array as argument and swaps items til lowest...highest 
-def bubble_sorting array
-#assign length of the array = variable(z)
-  z = array.length
-# like a while loop
-  loop do
-#boolean variable called "sorted" = false is when algorithm should exit
-# if true keeps looping
-    sorted = false
-#Inside loop check the value of each element and compare it w/ the next one
-# how many times it runs = z-1
-    (z-1).times do |i|
-      if array[i] > array[i+1]
-        array[i], array[i+1]=array[i+1], array[i]
-#ends loop once sorting = true        
-        sorted = true
-      end
-    end
-
-   break if not sorted
+    current_index += 1
   end
+  index_item
+end 
+p integers([2, 3, 6, 10, 11, 15], 6)
 
- array
+#_____________________________________________
+
+#Release 1: Calculate Fibonacci Numbers
+
+#start off with a 0 and a 1, and keep adding numbers onto the list by adding the previous two.
+#Add a method to your file that takes a number of Fibonacci terms to generate and returns an array of the terms
+# example  fib(6) would return [0,1,1,2,3,5]   fib(100) = 218922995834555169026
+
+# fib method
+def fibonaci(i)
+  fib = [0,1]
+  while fib.length < i   
+  fib << fib[-2] + fib[-1] 
+  end
+  fib
+end 
+# pass in 100 to == 2189......26 
+fibonaci(100)
+if fibonaci(100) [-1] == 218922995834555169026
+  puts 'it works'
 end
-#when sorted = false - return sorted array
-# show original numbers then sorted numbers.
-x = [1, 6, 3, 7, 9, 10, 8, 5, 2, 11]
-puts "Original Array:"
-p [x]
-puts "Data after Bubble Sorting Loop:"
-p bubble_sorting(x)
+fibonaci(50)
+
+#_____________________________________________
+
+#Release 2: Sort an Array
+#bubble sort   = sorting algorithm
+#sorting method that takes an array of integers and uses a sorting algorithm
+#return a sorted version of the array
+# assign an array
+numbers = [9, 6, 7, 1, 2]
+
+def sort_array(array)
+  # arr = arr.length for loop
+  arr = array.length 
+  loop do 
+    swap = false
+    # go thru each index = times of indices
+    (arr-1).times  do |i|
+    if array[i] > array[i + 1]
+      array[i], array[i + 1] = array[i + 1], array[i]
+      swap = true
+    end
+  end
+  # stop when = false no more indices to look at
+  break if  swap == false
+  end 
+  array
+end 
+#print the final array after it is sorted
+p sort_array(numbers)
+
+# Form a conceptual understanding of how the algorithm works....... I am trying to visualize how this is working...creating a mental image in my brain.
+# What helps you grasp it? typing it over and over in repl !!
+# Do visualizations help?  yes as long as I am typing it for mental and physical memory to seal it in my brain!!
+# How can you find the right materials for yourself?  search search search... I need videos, reading material...and like I said I need to type it 1000 times!
+# Notice your emotional state as you tackle this algorithm: I feel frustrated, underqualified, and always overwhelmed in the beginning...then i try to compartmentalize little bit at a time.
+# I get excited after the 1st run and i see the errors....cuz thats when I start fixing the issues...it's "GAME TIME!"
+# How do you think these feelings affect your ability to learn? When I am extremely anxious i can't pull info out of my brain to save my life....
+# ....so i know I need to not look ahead.  solve one little bit of code at a time!!  got to get things right this 2nd time around !!!
