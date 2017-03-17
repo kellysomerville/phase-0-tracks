@@ -3,6 +3,7 @@
 
 # Write a method that takes an array of integers (integer) = integer to search for. 
 #The method should return index of the item
+
 # def takes_an_integer
 def integers (arr, int)
   current_index = 0
@@ -18,6 +19,7 @@ end
 p integers([2, 3, 6, 10, 11, 15], 6)
 
 #_____________________________________________
+
 
 #Release 1: Calculate Fibonacci Numbers
 
@@ -38,15 +40,18 @@ fibonaci(100)
 if fibonaci(100) [-1] == 218922995834555169026
   puts 'it works'
 end
+# run one last time passing (50)
 fibonaci(50)
 
 #_____________________________________________
 
 #Release 2: Sort an Array
+
 #bubble sort   = sorting algorithm
 #sorting method that takes an array of integers and uses a sorting algorithm
 #return a sorted version of the array
 # assign an array
+
 numbers = [9, 6, 7, 1, 2]
 
 def sort_array(array)
