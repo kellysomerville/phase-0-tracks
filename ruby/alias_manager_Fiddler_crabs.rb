@@ -4,6 +4,9 @@
 # change all the vowels to next
 # change all the consonants to next
 
+# array for secret agent names
+secret_agent_name = []
+
 # secret agent swap  
 def secret_name (str)
  s =  str
@@ -42,6 +45,43 @@ def consonants_adv(str)
   str_new.join
 end
 # consonants_adv('Kelly Somerville')
+
+ # user input for secret agent names.....
+puts " Hello New Agent, Let's get your new name assignment."
+puts " Please enter your first and last name"
+name = gets.chomp
+name = consonants_adv(name)
+secret_agent_name.push(name)
+secret_agent_name
+puts "Would you like to enter another name. type :  yes or no ?"
+another_name = gets.chomp
+
+# loop and push new names into array
+ while  another_name == 'yes'
+  if    another_name == "yes"
+    puts " Please enter another first and last name."
+    name = gets.chomp
+    name = consonants_adv(name)
+    secret_agent_name.push(name)
+    secret_agent_name
+    puts "Would you like to continue? yes or no ?"
+    another_name = gets.chomp
+    another_name = consonants_adv(name)
+    secret_agent_name.push(another_name)
+    secret_agent_name
+  elsif another_name == "no"
+    secret_agent_name
+  else
+    secret_agent_name
+  end
+ end
+puts " Here are your secret agent names: "
+ secret_agent_name
+
+
+
+
+
 
 ##########################################################
 
