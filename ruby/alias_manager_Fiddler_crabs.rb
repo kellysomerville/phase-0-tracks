@@ -4,7 +4,44 @@
 # change all the vowels to next
 # change all the consonants to next
 
+# secret agent swap  
+def secret_name (str)
+ s =  str
+s.split(/\b/).reverse!.join('')
+end
 
+
+# secret_name = advance vowel
+def vowel_adv(str)
+  str = secret_name(str)
+  vowels = ["a", "e", "i", "o", "u"]
+  str = str.split('')
+  str_new = str.map do |char|
+    if vowels.include?(char)
+      vowels.rotate(1)[vowels.index(char)]
+    else
+      char
+    end
+  end
+  str_new.join
+end
+
+# secret agent name = shift consonants next
+def consonants_adv(str)
+  str = vowel_adv(str)
+  consonants = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z"]
+  str = str.downcase
+  str = str.split('')
+  str_new = str.map do |char|
+    if consonants.include?(char)
+      consonants.rotate(1)[consonants.index(char)]
+    else
+      char
+    end
+  end
+  str_new.join
+end
+# consonants_adv('Kelly Somerville')
 
 ##########################################################
 
