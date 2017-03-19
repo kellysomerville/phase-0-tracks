@@ -75,11 +75,19 @@ another_name = gets.chomp
     secret_agent_name
   end
  end
-puts " Here are your secret agent names: "
+#  puts " Here are your secret agent names: "
+# if input is "Kelly Somerville"  => "tuniswommi limmz"  Correct !
  secret_agent_name
 
-# if input is "Kelly Somerville"  => "tuniswommi limmz"  Correct !
 
+#while loop thru index of secret name array return all secret agent names
+
+index = 0 
+while index < secret_agent_name.length
+puts " Here is your secret agent name :===>   #{secret_agent_name[index]}   !!! "
+index += 1 
+end
+secret_agent_name
 
 
 
