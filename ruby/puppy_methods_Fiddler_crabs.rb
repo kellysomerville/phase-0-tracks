@@ -1,3 +1,41 @@
+##################
+#class Car
+#########################
+class Car
+
+ def initialize
+    puts "Vroooooom.....!"
+  end
+
+ def car_laps(number_of_laps)
+    puts "Im going to race around the track #{number_of_laps} times before lunch today !"
+  end
+  
+  def car_wash(wash_car)
+    puts "Keep your car clean !"
+  end
+  
+  def car_service(engine_service)
+    puts " Remember to service your engine! "
+  end
+end
+
+garage = []
+x = 1
+while x < 50
+# creating(inner)car
+  car = Car.new
+  garage << car
+  x += 1
+end
+
+garage.each do |car|
+  car.car_laps(30)
+  car.car_wash(4)
+  car.car_service(1)
+end 
+
+
 # class Puppy
 
 class Puppy
@@ -48,42 +86,6 @@ y = Puppy.new
 y.dog_jump_height(100)
 
 
-##################
-#class Car
-#########################
-class Car
-
- def initialize
-    puts "Vroooooom.....!"
-  end
-
- def car_laps(number_of_laps)
-    puts "Im going to race around the track #{number_of_laps} times before lunch today !"
-  end
-  
-  def car_wash(wash_car)
-    puts "Keep your car clean !"
-  end
-  
-  def car_service(engine_service)
-    puts " Remember to service your engine! "
-  end
-end
-
-garage = []
-x = 1
-while x < 50
-# creating(inner)car
-  car = Car.new
-  garage << car
-  x += 1
-end
-
-garage.each do |car|
-  car.car_laps(30)
-  car.car_wash(4)
-  car.car_service(1)
-end 
 
 
 ############################################
