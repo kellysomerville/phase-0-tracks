@@ -56,6 +56,15 @@ remove_item_from_list(grocery_list_hash,"Lemonade", 2)
 update_quantity_of_item(grocery_list_hash,"Ice Cream",1)
 print_grocery_list(grocery_list_hash)
 
+# What did you learn about pseudocode from working on this challenge?  That the success and organization of your code is bases on good pseudocode !  It also
+# helps the team (Pair) to stay organized and on the same page as far as the direction of the project.
+# What are the tradeoffs of using arrays and hashes for this challenge?  The hash make it much easier to deal with key/value pairs.  I didn't have to worry about merging
+# arrays together and matching up the pairs.  The Hash provided a nice tight data structure.
+# What does a method return?  This method returns my spiff grocery list.  Which is the result after my drivers code calls the methods to do their thing 
+# What kind of things can you pass into methods as arguments?  Well you can pass the entire hash, an array, a variable, integers, operators, srings..anything thats an object in ruby.
+# How can you pass information between methods?  by calling the method it turns on the chain of events which make your methods function as a unit to complete the task at hand
+# What concepts were solidified in this challenge, and what concepts are still confusing?  Much easier to navigate using a hash, and passing in the correct arguments to make my code function properly.
+
 # create_list("carrots apples cereal pizza")
 # input: string of items separated by spaces (example: "carrots apples cereal pizza")
 # steps: 
@@ -87,9 +96,11 @@ print_grocery_list(grocery_list_hash)
  #print the keys as the grocery list items and the values of the grocery list quantities
 # output: updated list
 
-# ###################################
-#bwlow is my bumblebees 
-##################################
+
+
+#########################################################################################
+#below is my bumblebees 
+#########################################################################################
 # # Method to create a list
 # # input: string of items separated by spaces (example: "carrots apples cereal pizza")
 # # steps: 
