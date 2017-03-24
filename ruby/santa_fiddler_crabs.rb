@@ -1,4 +1,6 @@
 class Santa
+	
+	
 
 reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
 
@@ -16,6 +18,26 @@ reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", 
 	def eat_milk_and_cookies(cookie)
 		puts "That was a good #{cookie}!"
 	end 
+
+	def celebrate_birthday
+		@age = age + 1
+	end
+
+	def get_mad_at(name) 
+		@name = name[-1]
+	end
+# setter
+	def gender=(new_gender)
+		@gender = new_gender 
+	end
+
+	def age 
+		@age
+	end
+
+	def ethnicity
+		@ethnicity
+	end
 
 	santas = []
 example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
