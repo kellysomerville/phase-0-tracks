@@ -17,13 +17,21 @@ reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", 
 		puts "That was a good #{cookie}!"
 	end 
 
+	santas = []
+example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+example_genders.length.times do |i|
+  santas << Santa.new(example_genders[i], example_ethnicities[i])
+
+ # p santas
+end
 
 end   
 
-ho_ho = Santa.new
-ho_ho.speak
-eat = Santa.new
-eat.eat_milk_and_cookies('choco_chip')
+santa = Santa.new('male','blue')
+santa.speak
+santa.eat_milk_and_cookies('choco_chip')
+p santa
 
 
 
