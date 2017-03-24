@@ -1,6 +1,9 @@
 class Santa
 	
-	
+	#getter =   #attr_reader (ex. :location )  
+  	attr_reader :age, :ethnicity
+  	#setter -writable from outside read and write = # attr_accessor in them /reassignable
+   	attr_accessor :gender
 
 reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
 
@@ -26,18 +29,6 @@ reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", 
 	def get_mad_at(name) 
 		@name = name[-1]
 	end
-# setter
-	def gender=(new_gender)
-		@gender = new_gender 
-	end
-
-	def age 
-		@age
-	end
-
-	def ethnicity
-		@ethnicity
-	end
 
 	santas = []
 example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
@@ -58,8 +49,18 @@ p santa
 
 
   
-
-
+# # setter
+# 	def gender=(new_gender)
+# 		@gender = new_gender 
+# 	end
+# getter
+# 	def age 
+# 		@age
+# 	end
+#getter
+# 	def ethnicity
+# 		@ethnicity
+# 	end
 
 
 
