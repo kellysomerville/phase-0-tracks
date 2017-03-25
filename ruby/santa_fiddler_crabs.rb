@@ -1,19 +1,28 @@
 class Santa
-	
-	#getter =   #attr_reader (ex. :location )  
-  	attr_reader :age, :ethnicity
-  	#setter -writable from outside read and write = # attr_accessor in them /reassignable
-   	attr_accessor :gender
+  #getter = :age, :ethnicity
+  attr_reader :age, :ethnicity 
+  #setter -writable from outside read and write = 
+ attr_accessor :name, :gender
+  
 
-reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+
 
 	def initialize(gender, ethnicity) 
 		puts "Initializing Santa instance ..."
 		@gender = gender
 		@ethnicity = ethnicity
-		@age = 0
+		@age = *(1..100)
+		@name = name
+		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
 	end
-
+# move vixen to the end !!
+	def get_mad_at(name) 
+		  @reindeer_ranking.delete(name)
+    	  @reindeer_ranking<<(name)
+   		 #@reindeer_ranking.last(name)
+   		p @reindeer_ranking
+	end
+	
 	def speak
 		puts  "Ho, ho, ho! Haaaappy holidays!" 
 	end
@@ -21,30 +30,126 @@ reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", 
 	def eat_milk_and_cookies(cookie)
 		puts "That was a good #{cookie}!"
 	end 
-
-	def celebrate_birthday
-		@age = age + 1
+	
+	def celebrate_birthday(age)
+		#@age = age += 1
+		# @age.sample
+		puts "Santa is #{@age.sample}"
 	end
-
-	def get_mad_at(name) 
-		@name = name[-1]
+	
+	# random selection from the 2 sample_arrays use .sample
+	
+	santas_random = []
+	genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+	ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+  	genders.each do |i|
+  	santas_random << Santa.new(genders.sample, ethnicities.sample)
 	end
-
+	p santas_random
+ 
 	santas = []
-example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
-example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
-example_genders.length.times do |i|
-  santas << Santa.new(example_genders[i], example_ethnicities[i])
-
- # p santas
-end
-
+	example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+	example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+	example_genders.length.times do |i|
+  	santas << Santa.new(example_genders[i], example_ethnicities[i])
+	# p santas
+	end
 end   
 
-santa = Santa.new('male','blue')
+santa = Santa.new('male', 'blue')
+#below works because of setter meth
+# santa.name = "This santa is now crazy"
 santa.speak
+santa.celebrate_birthday(1)
+santa.get_mad_at("Vixen")
 santa.eat_milk_and_cookies('choco_chip')
-p santa
+puts "#{santa.eat_milk_and_cookies("mint_chip")}"
+# below calls "male", "blue"
+# santa
+
+
+
+
+########
+# below is 1st try...in fiddler above I did it all again w.out errors
+# class Santa
+	
+# 	#getter =   #attr_reader (ex. :location )  
+#   	# attr_reader :age, :ethnicity, 
+#   	# attr_accessor :gender
+#   	#setter -writable from outside read and write = # attr_accessor in them /reassignable
+   	
+
+# 	def initialize(gender, ethnicity) 
+# 		puts "Initializing Santa instance ..."
+# 		@gender = gender
+# 		@ethnicity = ethnicity
+# 		@age = 0
+# 		@name = name
+		
+# 	end
+
+# 	def speak
+# 		puts  "Ho, ho, ho! Haaaappy holidays!" 
+# 	end
+
+# 	def eat_milk_and_cookies(cookie)
+# 		puts "That was a good #{cookie}!"
+# 	end 
+
+# 	def celebrate_birthday
+# 		@age = age + 1
+# 	end
+# 	# # setter
+# 	def gender=(new_gender)
+# 		@gender = new_gender 
+# 	end
+# #getter
+# 	def age 
+# 		@age
+# 	end
+# #getter
+# 	def ethnicity
+# 		@ethnicity
+# 	end
+
+# 	# def get_mad_at(name) 
+# 	# 	#reindeer_ranking.rotate(@name)[-1] #= name[-1]
+# 	# 	reindeer_ranking.delete(@name)
+#  #   		reindeer_ranking.push(@name)
+# 	# end
+
+# 		# random selection from the 2 sample_arrays use .sample
+# 	santas_random = []
+# 	genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+# 	ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+#   	genders.each do |i|
+#   	santas_random << Santa.new(genders.sample, ethnicities.sample)
+# end
+# p santas_random
+
+# 	santas = []
+# example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+# example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+# example_genders.length.times do |i|
+#   santas << Santa.new(example_genders[i], example_ethnicities[i])
+# end
+# p santas
+# #@gender = new_genders.sample
+# reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+# p reindeer_ranking
+#  # p santas
+
+# end   
+
+# santa = Santa.new('male', 'blue')
+# #below works because of setter meth
+# santa.name = "This santa is now crazy"
+# santa.speak
+# santa.eat_milk_and_cookies('choco_chip')
+# puts "#{santa.eat_milk_and_cookies("mint")}"
+# # below calls "male", "blue"
+# # santa
 
 
 
