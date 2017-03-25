@@ -1,22 +1,45 @@
+module Yell
+  def scream(yell)
+    puts "Holy shit she can ......#{yell}"
+  end
+end
+
+class Grandma
+  include Yell
+end
+
+class School_teacher
+  include Yell
+end
+
+grandma = Grandma.new
+grandma.scream('WHAT DID YOU SAAAAYYYYY! ')
+school_teacher = School_teacher.new 
+school_teacher.scream(' SIT DOWN AND SHUT UP !!!')
+
+
+
+
+
 # require_relative 'shout'  what module methods available
 # Shout.singleton_methods
 
-module Shout 
-  def self.yell_angrily(words)    
-   words + "!!!" + " :("  
-  end
+# module Shout 
+#   def self.yell_angrily(words)    
+#    words + "!!!" + " :("  
+#   end
 
-  def self.yelling_happily(words)
-    words + "ohhh Yeahhhh" +  "Right on !!!"
-  end
-end
-# adds driver code
-p Shout.yell_angrily(" AHHHHHHHHUUUGHHHHHH")
-p Shout.yelling_happily("   weeeeeeeeee  !!!   ")
-
-
+#   def self.yelling_happily(words)
+#     words + "ohhh Yeahhhh" +  "Right on !!!"
+#   end
+# end
+# # adds driver code
+# p Shout.yell_angrily(" AHHHHHHHHUUUGHHHHHH")
+# p Shout.yelling_happily("   weeeeeeeeee  !!!   ")
 
 
+
+# BELOW IS BUMBLEBEES
 #shout module
 #module Shout
 	# add yell def
