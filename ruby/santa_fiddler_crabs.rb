@@ -20,20 +20,23 @@ class Santa
 		  @reindeer_ranking.delete(name)
     	  @reindeer_ranking<<(name)
    		 #@reindeer_ranking.last(name)
+   		 puts " That #{name} is at the end of the line !!! "
    		p @reindeer_ranking
 	end
 	
 	def speak
+		puts "LOOOOK OUT.....IT'S SANTA !"
 		puts  "Ho, ho, ho! Haaaappy holidays!" 
 	end
 
 	def eat_milk_and_cookies(cookie)
-		puts "That was a good #{cookie}!"
+		puts "That was a good #{cookie} cookie !!!"
 	end 
 	
 	def celebrate_birthday(age)
 		#@age = age += 1
 		# @age.sample
+		puts "HOLY SMOKES..HOW OLD IS SANTA ?? "
 		puts "Santa is #{@age.sample}"
 	end
 	
