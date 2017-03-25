@@ -1,3 +1,11 @@
+module Shout 
+  # code here in a min
+end
+
+
+
+
+
 #shout module
 #module Shout
 	# add yell def
